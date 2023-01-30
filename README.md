@@ -1,1 +1,1 @@
-Kurssin DTEK0097 Käyttöliittymät ryhmäprojekti
+Kurssin DTEK0097 Käyttöliittymät ryhmäprojekti. Projekti alunperin UTU:n GitLabissa.
