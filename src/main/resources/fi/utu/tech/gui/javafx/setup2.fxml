@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="setup2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.utu.tech.gui.javafx.Setup2Controller">
+   <children>
+      <Label fx:id="instructions" alignment="CENTER" prefHeight="99.0" prefWidth="600.0" text="Now please choose gameboard size and battleships.">
+         <font>
+            <Font name="Open Sans Extrabold" size="20.0" />
+         </font></Label>
+      <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="63.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="boardLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="160.0" text="Board size">
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceBox" onAction="#onChoiceboxAction" prefHeight="24.0" prefWidth="80.0">
+               <HBox.margin>
+                  <Insets right="170.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <GridPane maxWidth="1.7976931348623157E308" prefHeight="226.0" prefWidth="60.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="329.0" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="261.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="63.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="46.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="carrierLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="188.0" text="Carriers">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="battleshipLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="184.0" text="Battleships" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="cruiserLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="172.0" text="Cruisers" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="submarineLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="178.0" text="Submarines" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="destroyerLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="176.0" text="Destroyers" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Spinner fx:id="carrier" onMouseClicked="#onSpinnerAction" prefHeight="24.0" prefWidth="80.0" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Spinner>
+            <Spinner fx:id="battleship" onMouseClicked="#onSpinnerAction" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Spinner>
+            <Spinner fx:id="cruiser" onMouseClicked="#onSpinnerAction" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Spinner>
+            <Spinner fx:id="submarine" onMouseClicked="#onSpinnerAction" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Spinner>
+            <Spinner fx:id="destroyer" onMouseClicked="#onSpinnerAction" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Spinner>
+            <Rectangle fx:id="carrierR" arcHeight="5.0" arcWidth="5.0" fill="#949da6" height="41.0" stroke="#08080800" strokeType="INSIDE" width="200.0" GridPane.columnIndex="2" />
+            <Rectangle fx:id="battleshipR" arcHeight="5.0" arcWidth="5.0" fill="#949ea8" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="160.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Rectangle fx:id="cruiserR" arcHeight="5.0" arcWidth="5.0" fill="#949ea8" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Rectangle fx:id="submarineR" arcHeight="5.0" arcWidth="5.0" fill="#949ea8" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Rectangle fx:id="destroyerR" arcHeight="5.0" arcWidth="5.0" fill="#949ea8" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="80.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </GridPane>
+      <ProgressBar fx:id="validityBar" prefHeight="20.0" prefWidth="319.0" progress="0.0">
+         <VBox.margin>
+            <Insets bottom="15.0" top="30.0" />
+         </VBox.margin>
+      </ProgressBar>
+      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnPrevious" mnemonicParsing="false" onAction="#onPreviousButtonClick" prefHeight="35.0" prefWidth="95.0" text="&lt;- Previous">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnNext" mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="35.0" prefWidth="95.0" text="Next -&gt;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+      <Label fx:id="warning" alignment="CENTER" prefHeight="68.0" prefWidth="426.0" text="Warning" textFill="#c61d1d">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Label>
+   </children>
+</VBox>

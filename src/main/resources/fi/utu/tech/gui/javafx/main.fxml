@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.utu.tech.gui.javafx.MainController">
+   <top>
+      <HBox fx:id="upperButtons" alignment="CENTER" prefHeight="38.0" prefWidth="600.0" spacing="6.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnMainMenu" mnemonicParsing="false" onAction="#onMainMenuButtonClick" text="Main menu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnMute" onAction="#onMuteButtonClick" text="Mute sound">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnInstructions" mnemonicParsing="false" onAction="#onInstructionsButtonClick" text="Instructions">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnCredits" mnemonicParsing="false" onAction="#onCreditsButtonClick" text="Credits">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnQuit" mnemonicParsing="false" onAction="#onQuitButtonClick" text="Quit">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnLanguage" mnemonicParsing="false" onAction="#onLanguageButtonClick" prefHeight="24.0" prefWidth="31.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <fx:include fx:id="battle" source="battle.fxml" />
+      <fx:include fx:id="setup3" source="setup3.fxml" />
+      <fx:include fx:id="setup2" source="setup2.fxml" />
+      <fx:include fx:id="setup1" source="setup1.fxml" />
+      <!--
+      <fx:include fx:id="setup2" source="setup2.fxml" />
+      <fx:include fx:id="setup3" source="setup3.fxml" />
+      <fx:include fx:id="battle" source="battle.fxml" />
+      -->
+   </center>
+</BorderPane>

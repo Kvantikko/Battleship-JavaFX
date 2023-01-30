@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="setup3" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.utu.tech.gui.javafx.Setup3Controller">
+   <children>
+      <StackPane prefHeight="107.0" prefWidth="900.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="900.0" spacing="6.0">
+               <children>
+                  <Label fx:id="instructionsName" alignment="CENTER_RIGHT" prefHeight="100.0" text="Player Name">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="instructions" prefHeight="100.0" text="please drag your ships to the board">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="435.0" prefWidth="600.0">
+         <children>
+            <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="750.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="btnReset" layoutX="97.0" layoutY="360.0" mnemonicParsing="false" onAction="#onResetButtonClick" prefHeight="35.0" prefWidth="95.0" text="Reset">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="rotateInstructions" alignment="CENTER" layoutX="-7.0" layoutY="297.0" maxWidth="1.7976931348623157E308" prefHeight="57.0" prefWidth="857.0" text="Press R to rotate ship while dragging">
+                     <padding>
+                        <Insets right="500.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="259.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="210.0" prefWidth="64.0" spacing="23.0">
+                     <children>
+                        <Label fx:id="carrierAmount" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="battleshipAmount" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cruiserAmount" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="submarineAmount" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="destroyerAmount" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Rectangle fx:id="destroyerCounter" arcHeight="5.0" arcWidth="5.0" fill="#fffffff7" height="19.0" layoutX="78.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" width="154.0" />
+                  <Rectangle fx:id="carrierCounter" arcHeight="5.0" arcWidth="5.0" fill="#fffffff7" height="19.0" layoutX="78.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" width="154.0" />
+                  <Rectangle fx:id="submarineCounter" arcHeight="5.0" arcWidth="5.0" fill="#fffffff7" height="19.0" layoutX="78.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" width="154.0" />
+                  <Rectangle fx:id="battleshipCounter" arcHeight="5.0" arcWidth="5.0" fill="#fffffff7" height="19.0" layoutX="78.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="154.0" />
+                  <Rectangle fx:id="cruiserCounter" arcHeight="5.0" arcWidth="5.0" fill="#fffffff7" height="19.0" layoutX="78.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" width="154.0" />
+               </children></Pane>
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="900.0" spacing="5.0">
+         <children>
+            <Button fx:id="btnPrevious" mnemonicParsing="false" onAction="#onPreviousButtonClick" prefHeight="35.0" prefWidth="95.0" text="&lt;- Previous">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnNext" mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="35.0" prefWidth="95.0" text="Next -&gt;">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+      <Label fx:id="warning" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="900.0" text="You have to drag your ships to the gameboard before continuing!" textFill="#c61d1d" />
+   </children>
+</VBox>
